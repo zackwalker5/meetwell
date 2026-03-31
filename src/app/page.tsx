@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { ArrowRightIcon, CalendarPlusIcon, Link2Icon, SparklesIcon } from "lucide-react";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 function DemoGrid() {
   const days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
@@ -60,14 +61,17 @@ export default function HomePage() {
       <header className="px-6 py-5">
         <div className="max-w-5xl mx-auto flex items-center justify-between">
           <span className="text-base font-heading font-semibold tracking-tight">
-            whenwell
+            meetwell
           </span>
-          <Link href="/new">
-            <Button variant="outline" size="sm">
-              <CalendarPlusIcon data-icon="inline-start" />
-              New event
-            </Button>
-          </Link>
+          <div className="flex items-center gap-4">
+            <ThemeToggle />
+            <Link href="/new">
+              <Button variant="outline" size="sm">
+                <CalendarPlusIcon data-icon="inline-start" />
+                New event
+              </Button>
+            </Link>
+          </div>
         </div>
       </header>
 
@@ -185,7 +189,7 @@ export default function HomePage() {
       <footer className="border-t px-6 py-6">
         <div className="max-w-5xl mx-auto flex items-center justify-between">
           <span className="text-xs text-muted-foreground">
-            whenwell
+            meetwell
           </span>
           <span className="text-xs text-muted-foreground">
             No ads. No tracking. Just scheduling.

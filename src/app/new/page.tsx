@@ -13,6 +13,7 @@ import { FieldGroup, Field, FieldLabel, FieldDescription } from "@/components/ui
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { ArrowRightIcon, Loader2Icon, XIcon, ChevronDownIcon } from "lucide-react";
 import Link from "next/link";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const TIME_OPTIONS = Array.from({ length: 49 }, (_, i) => {
   const minutes = i * 30;
@@ -76,10 +77,11 @@ export default function NewEventPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="px-6 py-5">
-        <div className="max-w-xl mx-auto">
+        <div className="max-w-xl mx-auto flex items-center justify-between">
           <Link href="/" className="text-base font-heading font-semibold tracking-tight">
-            whenwell
+            meetwell
           </Link>
+          <ThemeToggle />
         </div>
       </header>
 

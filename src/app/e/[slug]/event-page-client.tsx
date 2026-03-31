@@ -15,6 +15,7 @@ import type { HeatmapData } from "@/lib/heatmap";
 import { toast } from "sonner";
 import { UserIcon, UsersIcon } from "lucide-react";
 import Link from "next/link";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 interface EventData {
   id: string;
@@ -106,7 +107,7 @@ export function EventPageClient({
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-4">
             <Link href="/" className="text-base font-heading font-semibold tracking-tight text-muted-foreground hover:text-foreground transition-colors">
-              whenwell
+              meetwell
             </Link>
             <Separator orientation="vertical" className="h-5" />
             <div>
@@ -116,7 +117,10 @@ export function EventPageClient({
               )}
             </div>
           </div>
-          <ShareDialog slug={event.slug} />
+          <div className="flex items-center gap-4">
+            <ThemeToggle />
+            <ShareDialog slug={event.slug} />
+          </div>
         </div>
       </header>
 

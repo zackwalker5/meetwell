@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!event) return { title: "Event not found" };
   return {
-    title: `${event.title} — whenwell`,
+    title: `${event.title} — meetwell`,
     description: `Add your availability for ${event.title}`,
   };
 }

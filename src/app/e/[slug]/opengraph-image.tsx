@@ -54,7 +54,7 @@ export default async function OGImage({
           {event?.title ?? "Event"}
         </div>
         <div style={{ fontSize: 28, color: "#71717a" }}>
-          {count ?? 0} responses &middot; whenwell
+          {count ?? 0} responses &middot; meetwell
         </div>
       </div>
     )
